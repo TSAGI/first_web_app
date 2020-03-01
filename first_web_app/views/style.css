@@ -1,0 +1,21 @@
+h1 {
+    text-decoration: underline;
+}
+
+#div1 {
+    color: blue;
+}
+
+#div2 {
+    color: orange;
+}
+
+#div3 {
+    color: orangered;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+}
