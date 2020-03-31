@@ -1,4 +1,13 @@
-<h1><%= @title%></h1>
+<h1> <img src=<%= @recipe.image %>> <%= @title%> </h1>
+<div id="recipe_buttons">  
+    <form action="/edit/<%= @recipe.id %>" method="get" class="edit_form">        
+        <input type="submit" value="Edit Recipe" class="submit" id="edit">
+    </form>
+    <form action="/delete/<%= @recipe.id %>" method="POST" class="edit_form">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Delete Recipe" class="submit" id="delete">
+    </form>
+</div>
 
 <p>Prep time: <%= @recipe.prep_time %> minutes</p>
 

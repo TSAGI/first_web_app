@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../public/style.css">
-    <title>CookBook &raquo;<%= @title %></title>
-  </head>
-  <body>
-    <header>
-      <img src="../public/cookbook_icon.png" alt="Cookbook Icon">
-      <a href="/">CookBook</a>
-    </header>
-​
-    <main>
-      <%= yield %>
-      <br><br>
-      <div id="recipe-form">
+    <h1 id="title"><%= @title%></h1>
+
+    <div id="recipe-form">
       <form action="/" method="POST">
         <div>
           <label for="recipe_name">Recipe Name:</label>
@@ -39,16 +25,3 @@
         <input class="submit" type="submit" value="Add Recipe">
     </form>
   </div>
-    </main>
-​
-    <footer>
-      <a id="add" href="/add">Add Recipe</a>
-      |
-      <a id="about" href="/about">About Us</a>
-      |
-      <a id="contact" href="/contact">Contact Us</a>
-      |
-      <a id="fine_print" href="/fine_print">Fine Print</a>
-    </footer>
-  </body>
-</html>

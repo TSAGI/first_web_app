@@ -1,0 +1,33 @@
+    <h1 id="title"><%= @title%></h1>
+
+    <div id="recipe-form">
+      <form action="/recipes/<%= @recipe.id %>" method="POST">
+      <input type="hidden" name="_method" value="put">
+        <div>
+          <label for="recipe_name">Recipe Name:</label>
+          <input type="name" class="input" name="name" 
+            value="<%= @recipe.name %>" required><br><br>
+        </div>
+    
+        <div>
+          <label for="prep_time">Prep Time (in minutes):</label>
+          <input type="number" class="input" name="prep_time"
+            value="<%= @recipe.prep_time %>"><br><br>
+        </div>
+    
+        <div id="textarea">
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" 
+            oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>
+            <%= @recipe.description %></textarea><br><br>
+        </div>
+    
+        <div id="url">
+          <label for="recipe_url">Recipe Image Link:</label>
+          <input type="url" id="recipe_url" name="url"
+            value="<%= @recipe.image %>"><br><br>   
+        </div>
+
+        <input class="submit" type="submit" value="Edit Recipe">
+    </form>
+  </div>
